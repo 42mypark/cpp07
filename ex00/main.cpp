@@ -26,6 +26,7 @@ int main(void) {
   std::cout << "c = " << c << ", d = " << d << std::endl;
   std::cout << "min( c, d ) = " << ::min(c, d) << std::endl;
   std::cout << "max( c, d ) = " << ::max(c, d) << std::endl;
+  std::cout << '\n';
 
   DivTest();
 
@@ -34,8 +35,8 @@ int main(void) {
   int b1 = 1;
   std::cout << "address of a1 : " << &a1 << std::endl;
   std::cout << "address of b1 : " << &b1 << std::endl;
-  int& c1 = min(a1, b1);
-  std::cout << "address of min( a1, b1 ) : " << &c1 << std::endl;
+  std::cout << "address of min( a1, b1 ) : " << &min(a1, b1) << std::endl;
+  std::cout << '\n';
 
   DivTest();
 
@@ -44,8 +45,7 @@ int main(void) {
   int b2 = 1;
   std::cout << "address of a2 : " << &a2 << std::endl;
   std::cout << "address of b2 : " << &b2 << std::endl;
-  int& c2 = max(a2, b2);
-  std::cout << "address of max( a2, b2 ) : " << &c2 << std::endl;
+  std::cout << "address of max( a2, b2 ) : " << &max(a2, b2) << std::endl;
 
   return 0;
 }
