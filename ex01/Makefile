@@ -1,9 +1,9 @@
-NAME= cpp07_ex02.out
+NAME=cpp07_ex01.out
 CXXFLAGS= -Werror -Wextra -Wall -std=c++98
 
 SRCS =	main.cpp
 
-OBJS =	$(SRCS:.cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
@@ -11,9 +11,6 @@ $(NAME): $(OBJS)
 	$(CXX) -o $@ $(OBJS)
 
 %.o:%.cpp
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
-
-%.o:%.tpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 
